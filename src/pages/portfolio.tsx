@@ -7,26 +7,26 @@ import Seo from '../components/seo';
 
 const About = ({ data }: PageProps<Queries.AboutQuery>) => {
   const [bigView, setbigView] = useState(false);
-  const typesOfMakeup = [
-    {
-      name: 'bridal',
-    },
-    {
-      name: 'stage',
-    },
-    {
-      name: 'prom',
-    },
-    {
-      name: 'photo session',
-    },
-    {
-      name: 'party',
-    },
-    {
-      name: 'evening',
-    },
-  ];
+  // const typesOfMakeup = [
+  //   {
+  //     name: 'bridal',
+  //   },
+  //   {
+  //     name: 'stage',
+  //   },
+  //   {
+  //     name: 'prom',
+  //   },
+  //   {
+  //     name: 'photo session',
+  //   },
+  //   {
+  //     name: 'party',
+  //   },
+  //   {
+  //     name: 'evening',
+  //   },
+  // ];
 
   return (
     <Layout>
