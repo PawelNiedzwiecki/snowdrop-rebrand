@@ -1,5 +1,7 @@
 name: CI
 on:
+  push:
+    branches: [master]
   pull_request:
     types: [opened, reopened]
     branches: [master]
@@ -15,13 +17,6 @@ jobs:
         run: yarn
       - name: Build
         run: yarn build
-  prepare:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: '20.2.0'
       - name: Lint
         run: yarn lint
       - name: Type checking
