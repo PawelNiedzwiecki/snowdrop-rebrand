@@ -3,6 +3,11 @@ on:
   pull_request:
     branches: [master]
 jobs:
+  assign_author:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Auto Author Assign
+        uses: toshimaru/auto-author-assign@v2.0.1
   build_and_test:
     runs-on: ubuntu-latest
     steps:
@@ -12,11 +17,9 @@ jobs:
           node-version: '20.2.0'
       - name: Installing dependencies
         run: yarn install --frozen-lockfile
-      - name: Run Gatsby develop
-        run: yarn develop
+      - name: Build
+        run: yarn build
       - name: Lint
         run: yarn lint
       - name: Type checking
         run: yarn typecheck
-      - name: Build
-        run: yarn build
