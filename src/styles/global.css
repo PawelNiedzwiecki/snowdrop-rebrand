@@ -1,3 +1,28 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html {
+  @apply text-gray-800 accent-rose-500;
+}
+
+@layer base {
+  a {
+    @apply text-gray-800;
+    &:hover {
+      @apply text-rose-600;
+    }
+  }
+}
+
+@layer components {
+  .img-wrap {
+    @apply block w-full rounded-lg shadow-2xl shadow-slate-500;
+  }
+  .btn {
+    @apply block rounded-md bg-rose-600 px-4 py-2 text-sm font-semibold text-white hover:bg-rose-700 hover:text-white;
+  }
+  .btn-big {
+    @apply btn rounded-lg px-5 py-3 font-medium focus:outline-none focus:ring-4 focus:ring-rose-300 sm:w-fit;
+  }
+}
