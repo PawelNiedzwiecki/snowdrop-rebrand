@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { HiOutlineXMark, HiStar } from 'react-icons/hi2';
 
 export default function Banner() {

@@ -1,5 +1,5 @@
 import { Listbox, Transition } from '@headlessui/react';
-import React, { Fragment, useState } from 'react';
+import { Fragment, useState } from 'react';
 import { HiCheck, HiChevronUpDown } from 'react-icons/hi2';
 
 type ServicesTypes = {

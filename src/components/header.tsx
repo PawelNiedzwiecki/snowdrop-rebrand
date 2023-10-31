@@ -1,7 +1,7 @@
 import { Dialog } from '@headlessui/react';
 import { Link, graphql, useStaticQuery } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { HiBars3, HiOutlineXMark } from 'react-icons/hi2';
 
 const Header = () => {

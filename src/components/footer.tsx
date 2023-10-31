@@ -1,5 +1,4 @@
 import { StaticImage } from 'gatsby-plugin-image';
-import React from 'react';
 import { AiFillHeart } from 'react-icons/ai';
 import { BsFacebook, BsInstagram } from 'react-icons/bs';
 

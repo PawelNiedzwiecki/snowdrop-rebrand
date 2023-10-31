@@ -1,5 +1,4 @@
 import { HeadFC, Link } from 'gatsby';
-import React from 'react';
 import { FaQuestionCircle } from 'react-icons/fa';
 import Layout from '../components/layout';
 import Seo from '../components/seo';

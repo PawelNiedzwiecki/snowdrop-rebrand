@@ -1,6 +1,5 @@
 import { HeadFC } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
-import React from 'react';
 import Layout from '../components/layout';
 import Seo from '../components/seo';
 // area of service map

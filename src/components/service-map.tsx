@@ -1,5 +1,5 @@
 import { LatLngExpression } from 'leaflet';
-import React, { useEffect, useState } from 'react';
+import { memo, useEffect, useState } from 'react';
 import { MapContainer, Polygon, TileLayer } from 'react-leaflet';
 
 const ServiceMap = () => {
@@ -49,4 +49,4 @@ const ServiceMap = () => {
   );
 };
 
-export default React.memo(ServiceMap);
+export default memo(ServiceMap);

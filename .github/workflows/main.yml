@@ -12,6 +12,8 @@ jobs:
           node-version: '20.2.0'
       - name: Installing dependencies
         run: yarn install --frozen-lockfile
+      - name: Type checking
+        run: yarn typecheck
       - name: Lint
         run: yarn lint
       - name: Build

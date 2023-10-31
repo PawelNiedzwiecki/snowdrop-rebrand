@@ -1,5 +1,4 @@
 import { HeadFC } from 'gatsby';
-import React from 'react';
 import Layout from '../components/layout';
 import Select from '../components/select';
 import Seo from '../components/seo';

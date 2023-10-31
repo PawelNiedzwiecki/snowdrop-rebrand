@@ -1,7 +1,7 @@
 import type { HeadFC, PageProps } from 'gatsby';
 import { graphql } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Layout from '../components/layout';
 import Seo from '../components/seo';
 
