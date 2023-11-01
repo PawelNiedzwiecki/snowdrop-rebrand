@@ -1,9 +1,10 @@
 {
-  "include": ["./src/**/*"],
+  "include": ["./src/**/*", "./gatsby-node.ts", "./gatsby-config.ts", "./plugins/**/*"],
   "compilerOptions": {
     "target": "es5",
-    "jsx": "react",
-    "allowSyntheticDefaultImports": true
+    "jsx": "react-jsx",
+    "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true,
   },
   "exclude": ["node_modules", "public", ".cache"]
 }
