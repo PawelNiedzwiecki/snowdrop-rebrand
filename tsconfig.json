@@ -1,7 +1,7 @@
 {
   "include": ["./src/**/*", "./gatsby-node.ts", "./gatsby-config.ts", "./plugins/**/*"],
   "compilerOptions": {
-    "target": "es5",
+    "target": "esnext",
     "jsx": "react",
     "allowSyntheticDefaultImports": true,
     "skipLibCheck": true,
