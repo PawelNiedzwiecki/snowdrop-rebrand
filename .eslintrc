@@ -1,13 +1,20 @@
 {
+  "root": true,
   "parser": "@typescript-eslint/parser",
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
   "extends": [
     "eslint:recommended",
     "plugin:react/recommended",
+    "plugin:react/jsx-runtime",
     "plugin:@typescript-eslint/recommended",
     "prettier"
   ],
   "plugins": ["@typescript-eslint", "prettier", "react"],
-  "ignorePatterns": ["*.config.js"],
+  "ignorePatterns": ["*.config.js","**/*.d.ts", "graphql.config.js", "src/gatsby-types.d.ts", ".cache"],
   "rules": {
     "prettier/prettier": "error",
     "react/no-find-dom-node": "off",
@@ -31,9 +38,8 @@
     {
       "files": ["*.graphql"],
       "parser": "@graphql-eslint/eslint-plugin",
-      "plugins": ["@graphql-eslint", "unused-imports"],
+      "plugins": ["@graphql-eslint"],
       "rules": {
-        "unused-imports/no-unused-imports": "error",
         "@graphql-eslint/no-anonymous-operations": "error",
         "@graphql-eslint/naming-convention": [
           "error",
