@@ -1,3 +1,4 @@
+import React from 'react';
 import { HeadFC } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
 import Layout from '../components/layout';
