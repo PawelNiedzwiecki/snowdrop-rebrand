@@ -1,10 +1,10 @@
-import { HeadFC, Link } from 'gatsby';
+import { HeadFC, Link, type PageProps } from 'gatsby';
 import React from 'react';
 import { FaQuestionCircle } from 'react-icons/fa';
 import Layout from '../components/layout';
 import Seo from '../components/seo';
 
-const Prices = () => {
+const Prices: React.FC<PageProps> = () => {
   const services = [
     {
       name: 'Makeup (any type) including lashes',

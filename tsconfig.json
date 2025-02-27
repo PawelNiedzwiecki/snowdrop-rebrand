@@ -1,5 +1,10 @@
 {
-  "include": ["./src/**/*", "./gatsby-node.ts", "./gatsby-config.ts", "./plugins/**/*"],
+  "include": [
+    "./src/**/*",
+    "./gatsby-node.ts",
+    "./gatsby-config.ts",
+    "./plugins/**/*"
+  ],
   "compilerOptions": {
     "target": "esnext",
     "jsx": "react",
@@ -9,6 +14,8 @@
       "@/*": ["./src/*"],
       "@/static/*": ["./static/*"]
     },
+    "moduleResolution": "node",
+    "types": ["vitest/globals", "@testing-library/jest-dom"]
   },
   "exclude": ["node_modules", "public", ".cache"]
 }

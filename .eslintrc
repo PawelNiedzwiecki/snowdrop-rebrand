@@ -12,8 +12,20 @@
     "plugin:@typescript-eslint/recommended",
     "prettier"
   ],
+  "prettier/prettier": [
+    "error",
+    {
+      "endOfLine": "auto"
+    }
+  ],
   "plugins": ["@typescript-eslint", "prettier", "react"],
-  "ignorePatterns": ["*.config.js","**/*.d.ts", "graphql.config.js", "src/gatsby-types.d.ts", ".cache"],
+  "ignorePatterns": [
+    "*.config.js",
+    "**/*.d.ts",
+    "graphql.config.js",
+    "src/gatsby-types.d.ts",
+    ".cache"
+  ],
   "rules": {
     "prettier/prettier": "error",
     "react/no-find-dom-node": "off",

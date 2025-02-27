@@ -5,7 +5,7 @@ import React, { useState } from 'react';
 import Layout from '../components/layout';
 import Seo from '../components/seo';
 
-const About = ({ data }: PageProps<Queries.AboutQuery>) => {
+const Portfolio: React.FC<PageProps<Queries.AboutQuery>> = ({ data }) => {
   const [bigView, setbigView] = useState(false);
   // const typesOfMakeup = [
   //   {
@@ -54,11 +54,12 @@ const About = ({ data }: PageProps<Queries.AboutQuery>) => {
           );
         })}
       </div>
+      <section data-testid="projects-section">{/* projects content */}</section>
     </Layout>
   );
 };
 
-export default About;
+export default Portfolio;
 
 export const query = graphql`
 query About {

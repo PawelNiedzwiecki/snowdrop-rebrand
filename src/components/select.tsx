@@ -1,53 +1,15 @@
 import { Listbox, Transition } from '@headlessui/react';
-import React, { Fragment, useState } from 'react';
+import React, { Fragment, useEffect, useState } from 'react';
 import { HiCheck, HiChevronUpDown } from 'react-icons/hi2';
-
-type ServicesTypes = {
-  id: number;
-  name: string;
-  default?: boolean;
-};
-
-const services: ServicesTypes[] = [
-  {
-    id: 0,
-    name: 'Select service',
-    default: true,
-  },
-  {
-    id: 1,
-    name: 'Makeup',
-  },
-  {
-    id: 2,
-    name: 'Modelling',
-  },
-  {
-    id: 3,
-    name: 'Facial',
-  },
-  {
-    id: 4,
-    name: 'Eyebrow shaping & henna',
-  },
-  {
-    id: 5,
-    name: 'Other',
-  },
-];
+import { useSelectType } from '../hooks/useSelectType';
+import { services } from '../constants/service-types';
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ');
 }
 
-export default function Select({
-  selectedService = 0,
-}: {
-  selectedService: number;
-}) {
-  const selectType = services.find((service) => service.id === selectedService);
-  console.log('selectType', selectType);
-  const [selected, setSelected] = useState(selectType);
+export default function Select({ location }) {
+  const [selected, setSelected] = useSelectType(location);
 
   return (
     <Listbox value={selected} onChange={setSelected}>
@@ -59,7 +21,7 @@ export default function Select({
           <div className="relative mt-2">
             <Listbox.Button className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm shadow-sm focus:border-rose-500 focus:ring-rose-500">
               <span className="flex items-center">
-                <span className="block truncate">{selected.name}</span>
+                <span className="block truncate">{selected?.name}</span>
               </span>
               <span className="pointer-events-none absolute inset-y-0 right-0 ml-3 flex items-center pr-2">
                 <HiChevronUpDown

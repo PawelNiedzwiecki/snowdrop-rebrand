@@ -1,10 +1,10 @@
-import { HeadFC } from 'gatsby';
+import { HeadFC, type PageProps } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
 import React from 'react';
 import Layout from '../components/layout';
 import Seo from '../components/seo';
 
-const About = () => {
+const About: React.FC<PageProps> = () => {
   // const typesOfMakeup = [
   //   {
   //     name: 'bridal',

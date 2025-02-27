@@ -1,4 +1,4 @@
-import { HeadFC, Link, PageProps } from 'gatsby';
+import { HeadFC, Link, type PageProps } from 'gatsby';
 import * as React from 'react';
 import Seo from '../components/seo';
 
@@ -29,7 +29,9 @@ const NotFoundPage: React.FC<PageProps> = () => {
     <main style={pageStyles}>
       <h1 style={headingStyles}>Page not found</h1>
       <p style={paragraphStyles}>
-        Sorry 😔, we couldn’t find what you were looking for.
+        <span data-testid="sorry-message">
+          Sorry, we couldn’t find what you were looking for.
+        </span>
         <br />
         {process.env.NODE_ENV === 'development' ? (
           <>

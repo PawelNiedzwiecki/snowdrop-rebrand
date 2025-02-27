@@ -1,10 +1,10 @@
 import { StaticImage } from 'gatsby-plugin-image';
 import React from 'react';
 import Layout from '../components/layout';
-import { HeadFC } from 'gatsby';
+import { HeadFC, PageProps } from 'gatsby';
 import Seo from '../components/seo';
 
-export default function MainPage() {
+const MainPage: React.FC<PageProps> = () => {
   return (
     <Layout>
       <div className="flex items-center justify-between">
@@ -41,8 +41,8 @@ export default function MainPage() {
             alt="Hero image"
             layout="fullWidth"
             placeholder="dominantColor"
-            width={500}
-            height={700}
+            // width={500}
+            // height={700}
           />
         </div>
       </div>
@@ -78,5 +78,8 @@ export default function MainPage() {
       </div>
     </Layout>
   );
-}
+};
+
+export default MainPage;
+
 export const Head: HeadFC = () => <Seo title="Main Page" />;

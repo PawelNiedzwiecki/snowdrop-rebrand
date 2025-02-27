@@ -1,18 +1,11 @@
 import React, { useEffect } from 'react';
-import { HeadFC } from 'gatsby';
+import { HeadFC, type PageProps } from 'gatsby';
 import Layout from '../components/layout';
 import Select from '../components/select';
 import Seo from '../components/seo';
 import ServiceMap from '../components/service-map';
 
-const Contact = () => {
-  let id: number;
-  useEffect(() => {
-    const queryString = window.location.search;
-    const urlParams = new URLSearchParams(queryString);
-    id = parseInt(urlParams.get('id')) || 0;
-  }, []);
-
+const Contact: React.FC<PageProps> = ({ location }) => {
   const boxClass =
     'shadow-sm bg-gray-50 outline-none border border-gray-300 text-sm rounded-lg transition duration-300 focus:border-rose-400 block w-full p-2.5';
 
@@ -74,7 +67,7 @@ const Contact = () => {
             ))}
 
             <div>
-              <Select selectedService={id} />
+              <Select location={location} />
             </div>
             <div className="sm:col-span-2">
               <label
