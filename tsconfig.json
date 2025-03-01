@@ -10,6 +10,7 @@
     "jsx": "react",
     "allowSyntheticDefaultImports": true,
     "skipLibCheck": true,
+    "strict": true,
     "paths": {
       "@/*": ["./src/*"],
       "@/static/*": ["./static/*"]

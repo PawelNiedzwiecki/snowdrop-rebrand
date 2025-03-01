@@ -28,6 +28,8 @@ const Portfolio: React.FC<PageProps<Queries.AboutQuery>> = ({ data }) => {
   //   },
   // ];
 
+  console.log('data', data);
+
   return (
     <Layout>
       <button
@@ -43,8 +45,9 @@ const Portfolio: React.FC<PageProps<Queries.AboutQuery>> = ({ data }) => {
       >
         {data?.allFile?.edges?.map((edge) => {
           const image = getImage(edge.node);
+          console.log('image', image);
           return (
-            <div key={image?.layout}>
+            <div key={edge?.node?.childImageSharp?.id}>
               <GatsbyImage
                 className="img-wrap h-full"
                 image={image}
@@ -67,6 +70,7 @@ query About {
     edges {
       node {
         childImageSharp {
+          id
           gatsbyImageData(
             placeholder: DOMINANT_COLOR
             formats: [AUTO, WEBP, AVIF]

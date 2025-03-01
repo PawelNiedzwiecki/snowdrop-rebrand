@@ -3,8 +3,3 @@ export type ServicesType = {
   name: string;
   default?: boolean;
 };
-
-export type SelectType = {
-  selected: ServicesType;
-  setSelected: (selected: ServicesType) => void;
-};

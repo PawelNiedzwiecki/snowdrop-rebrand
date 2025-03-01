@@ -1,18 +1,21 @@
 import { useEffect, useState } from 'react';
 import { ServicesType } from '../types/select-types';
-import { services } from '../constants/service-types';
+import { services } from '../config/service-types';
+import { WindowLocation } from 'reach__router';
 
-export const useSelectType = (location) => {
-  const [selected, setSelected] = useState<ServicesType>(services[0]);
+export const useSelectServiceFromUrl = (location: WindowLocation) => {
+  const [selected, setSelected] = useState<ServicesType['name']>(
+    services[0].name
+  );
 
   useEffect(() => {
     const queryString = location.search;
     const urlParams = new URLSearchParams(queryString);
-    const id = parseInt(urlParams.get('id')) || 0;
+    const id = parseInt(urlParams.get('id') as string) ?? 0;
 
-    const selectedType = services.find((service) => service.id === id).id;
-    setSelected(services[selectedType]);
+    const foundService = services.find((service) => service.id === id)?.name;
+    setSelected(foundService ?? services[0].name);
   }, [location]);
 
-  return [selected, setSelected] as const;
+  return selected;
 };

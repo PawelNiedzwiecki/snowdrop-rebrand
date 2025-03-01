@@ -1,18 +1,26 @@
 import { Listbox, Transition } from '@headlessui/react';
-import React, { Fragment, useEffect, useState } from 'react';
+import React, { Fragment } from 'react';
 import { HiCheck, HiChevronUpDown } from 'react-icons/hi2';
-import { useSelectType } from '../hooks/useSelectType';
-import { services } from '../constants/service-types';
+import { services } from '../config/service-types';
+import { ControllerRenderProps, UseFormStateReturn } from 'react-hook-form';
+import { Inputs } from '../pages/contact';
 
-function classNames(...classes) {
+function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(' ');
 }
 
-export default function Select({ location }) {
-  const [selected, setSelected] = useSelectType(location);
+export default function Select({
+  field,
+  formState,
+}: {
+  field: ControllerRenderProps<Inputs, 'service'>;
+  formState: UseFormStateReturn<Inputs>;
+}) {
+  const { onChange, value } = field;
 
+  console.log('formState', formState.errors);
   return (
-    <Listbox value={selected} onChange={setSelected}>
+    <Listbox value={value} onChange={onChange}>
       {({ open }) => (
         <>
           <Listbox.Label className="block text-sm font-medium leading-6 text-gray-900">
@@ -21,7 +29,7 @@ export default function Select({ location }) {
           <div className="relative mt-2">
             <Listbox.Button className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm shadow-sm focus:border-rose-500 focus:ring-rose-500">
               <span className="flex items-center">
-                <span className="block truncate">{selected?.name}</span>
+                <span className="block truncate">{value}</span>
               </span>
               <span className="pointer-events-none absolute inset-y-0 right-0 ml-3 flex items-center pr-2">
                 <HiChevronUpDown
@@ -50,7 +58,7 @@ export default function Select({ location }) {
                         )
                       }
                       disabled={service.default}
-                      value={service}
+                      value={service.name}
                     >
                       {({ selected, active }) => (
                         <>
