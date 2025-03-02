@@ -5,34 +5,35 @@ import { HeadFC, Link, PageProps } from 'gatsby';
 import Seo from '../components/seo';
 
 const MainPage: React.FC<PageProps> = () => {
+  const spacing = 'py-12 sm:py-32';
   return (
     <Layout>
       {/* Hero Section */}
       <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-8 py-12">
         <div className="flex-1 py-8 md:py-20 pr-0 md:pr-8">
           <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
-            Enhance Your Natural Beauty
+            Transform Your Look
             <span className="block text-rose-600 mt-2">
-              With Professional Touch
+              With Expert Artistry
             </span>
           </h1>
           <p className="mt-8 text-lg leading-8 text-gray-600">
-            Welcome to Snowdrop Beauty, where artistry meets transformation.
-            Experience professional makeup services that enhance your natural
-            beauty and boost your confidence for any special occasion.
+            At Snowdrop Beauty, we blend artistry with expertise to enhance your
+            natural beauty. Our professional makeup services are tailored to
+            make you feel confident and radiant for every occasion.
           </p>
           <div className="mt-10 flex items-center gap-x-6">
             <Link
               to="#get-in-touch"
-              className="rounded-md bg-rose-600 px-5 py-3 text-sm font-semibold text-white shadow-sm hover:bg-rose-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-rose-700"
+              className="rounded-md bg-rose-600 px-6 py-3 text-base font-semibold text-white shadow-sm hover:bg-rose-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-rose-700"
             >
-              Book Now
+              Book Your Session
             </Link>
             <Link
               to="/services"
-              className="text-sm font-semibold leading-6 text-gray-900"
+              className="text-base font-semibold leading-6 text-gray-900 hover:text-rose-600"
             >
-              Learn more <span aria-hidden="true">→</span>
+              Explore Services <span aria-hidden="true">→</span>
             </Link>
           </div>
         </div>
@@ -48,15 +49,15 @@ const MainPage: React.FC<PageProps> = () => {
       </div>
 
       {/* Services Section */}
-      <div id="services" className="py-24 bg-gray-50">
+      <div id="services" className={spacing}>
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-              Our Services
+              Our Signature Services
             </h2>
             <p className="mt-6 text-lg leading-8 text-gray-600">
-              Professional makeup services tailored to your unique style and
-              occasion
+              Discover our range of professional makeup services, each crafted
+              to bring out your unique beauty
             </p>
           </div>
           <div className="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
@@ -80,12 +81,12 @@ const MainPage: React.FC<PageProps> = () => {
               <h3 className="mt-6 text-xl font-semibold text-gray-900">
                 Bridal Makeup
               </h3>
-              <p className="mt-4 text-center text-gray-600">
-                Perfect, long-lasting makeup for your special day
+              <p className="mt-4 text-center text-base text-gray-600">
+                Timeless, elegant makeup that lasts throughout your special day
               </p>
             </div>
 
-            {/* Special Occasion */}
+            {/* Special Events */}
             <div className="flex flex-col items-center p-8 bg-white rounded-xl shadow-sm">
               <div className="rounded-lg p-3 bg-rose-100">
                 <svg
@@ -103,14 +104,14 @@ const MainPage: React.FC<PageProps> = () => {
                 </svg>
               </div>
               <h3 className="mt-6 text-xl font-semibold text-gray-900">
-                Special Occasion
+                Special Events
               </h3>
-              <p className="mt-4 text-center text-gray-600">
-                Glamorous looks for parties and events
+              <p className="mt-4 text-center text-base text-gray-600">
+                Stunning looks for parties, photoshoots, and special occasions
               </p>
             </div>
 
-            {/* Facial Massage */}
+            {/* Skin Care & Beauty */}
             <div className="flex flex-col items-center p-8 bg-white rounded-xl shadow-sm">
               <div className="rounded-lg p-3 bg-rose-100">
                 <svg
@@ -128,10 +129,10 @@ const MainPage: React.FC<PageProps> = () => {
                 </svg>
               </div>
               <h3 className="mt-6 text-xl font-semibold text-gray-900">
-                Facial Massage
+                Skin Care & Beauty
               </h3>
-              <p className="mt-4 text-center text-gray-600">
-                Relaxing and rejuvenating facial treatments
+              <p className="mt-4 text-center text-base text-gray-600">
+                Revitalizing treatments for a naturally glowing complexion
               </p>
             </div>
           </div>
@@ -139,31 +140,31 @@ const MainPage: React.FC<PageProps> = () => {
       </div>
 
       {/* Stats Section */}
-      <div className="py-24 sm:py-32">
+      <div className={spacing}>
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <dl className="grid grid-cols-1 gap-x-8 gap-y-16 text-center lg:grid-cols-3">
+          <dl className="grid  gap-x-8 gap-y-16 text-center grid-cols-3">
             <div className="mx-auto flex max-w-xs flex-col gap-y-4">
-              <dt className="text-base leading-7 text-gray-600">
-                Happy clients
+              <dt className="text-base font-medium leading-7 text-gray-600">
+                Satisfied Clients
               </dt>
-              <dd className="order-first text-3xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
-                100+
+              <dd className="order-first text-3xl font-bold tracking-tight text-gray-900 sm:text-5xl">
+                500+
               </dd>
             </div>
             <div className="mx-auto flex max-w-xs flex-col gap-y-4">
-              <dt className="text-base leading-7 text-gray-600">
-                Years of Experience
+              <dt className="text-base font-medium leading-7 text-gray-600">
+                Years of Excellence
               </dt>
-              <dd className="order-first text-3xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
-                5+
+              <dd className="order-first text-3xl font-bold tracking-tight text-gray-900 sm:text-5xl">
+                10+
               </dd>
             </div>
             <div className="mx-auto flex max-w-xs flex-col gap-y-4">
-              <dt className="text-base leading-7 text-gray-600">
-                Professional Certificates
+              <dt className="text-base font-medium leading-7 text-gray-600">
+                Expert Artists
               </dt>
-              <dd className="order-first text-3xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
-                3
+              <dd className="order-first text-3xl font-bold tracking-tight text-gray-900 sm:text-5xl">
+                5
               </dd>
             </div>
           </dl>
@@ -175,18 +176,18 @@ const MainPage: React.FC<PageProps> = () => {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-              Ready to Transform?
+              Ready for Your Transformation?
             </h2>
             <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-600">
-              Book your appointment today and let's create your perfect look
-              together
+              Let's create your perfect look together. Book your consultation
+              today and experience the Snowdrop difference.
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <Link
                 to="/contact"
-                className="rounded-md bg-rose-600 px-5 py-3 text-sm font-semibold text-white shadow-sm hover:bg-rose-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-rose-700"
+                className="rounded-md bg-rose-600 px-6 py-3 text-base font-semibold text-white shadow-sm hover:bg-rose-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-rose-700"
               >
-                Book Appointment
+                Schedule Consultation
               </Link>
             </div>
           </div>

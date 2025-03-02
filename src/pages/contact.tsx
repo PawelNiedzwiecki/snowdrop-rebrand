@@ -54,7 +54,7 @@ const Contact: React.FC<PageProps> = ({ location }) => {
   // console.log(watch('name')); // watch input value by passing the name of it
 
   const boxClass =
-    'shadow-sm bg-gray-50 outline-none border border-gray-300 text-sm rounded-lg transition duration-300 focus:border-rose-400 block w-full p-2.5';
+    'shadow-sm bg-gray-50 outline-none border border-gray-300 text-sm rounded-lg transition duration-300 focus:border-red-700 block w-full p-2.5';
 
   const astreix = <span className="ml-0.5 text-xs">*</span>;
 
@@ -91,7 +91,7 @@ const Contact: React.FC<PageProps> = ({ location }) => {
   return (
     <Layout>
       <section>
-        <div className="mx-auto max-w-screen-md px-4 py-8 lg:py-16">
+        <div className="mx-auto max-w-screen-md px-4 py-5 lg:py-16 bg-white border-l-2 border-transparent overflow-hidden rounded-lg shadow-sm md:bg-transparent md:shadow-none">
           <h2 className="mb-4 text-center text-4xl font-extrabold tracking-tight text-gray-900">
             Let&apos;s get in touch!
           </h2>

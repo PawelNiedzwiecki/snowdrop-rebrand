@@ -33,12 +33,20 @@ const Prices: React.FC<PageProps> = () => {
 
   return (
     <Layout>
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <div className="mx-auto lg:px-8">
         <div className="mx-auto max-w-2xl pb-6 sm:text-center">
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
             Simple no-tricks pricing
           </h2>
           <p className="mt-6 text-lg leading-8 text-gray-600">
+            Distinctio et nulla eum soluta et neque labore quibusdam. Saepe et
+            quasi iusto modi velit ut non voluptas in. Explicabo id ut laborum.
+            Distinctio et nulla eum soluta et neque labore quibusdam. Saepe et
+            quasi iusto modi velit ut non voluptas in. Explicabo id ut laborum.
+            Distinctio et nulla eum soluta et neque labore quibusdam. Saepe et
+            quasi iusto modi velit ut non voluptas in. Explicabo id ut laborum.
+            Distinctio et nulla eum soluta et neque labore quibusdam. Saepe et
+            quasi iusto modi velit ut non voluptas in. Explicabo id ut laborum.
             Distinctio et nulla eum soluta et neque labore quibusdam. Saepe et
             quasi iusto modi velit ut non voluptas in. Explicabo id ut laborum.
           </p>
@@ -49,7 +57,7 @@ const Prices: React.FC<PageProps> = () => {
               key={name}
               className="group flex items-center justify-between border-l-2 border-transparent bg-white bg-opacity-40 px-4 py-2 transition-all duration-100  hover:border-rose-500"
             >
-              <div className="flex gap-x-4">
+              <div className="flex gap-x-4 flex-1">
                 <h3 className="text-base font-medium tracking-tight text-gray-900 group-hover:text-rose-600">
                   {name}
                 </h3>

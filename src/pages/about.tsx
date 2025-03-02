@@ -28,7 +28,7 @@ const About: React.FC<PageProps> = () => {
 
   return (
     <Layout>
-      <div className="mx-auto max-w-screen-xl items-center gap-16 px-4 py-8 lg:grid lg:grid-cols-2 lg:px-6 lg:py-16">
+      <div className="mx-auto max-w-screen-xl items-center gap-16 px-0 py-6 lg:grid lg:grid-cols-2 lg:px-6 lg:py-16">
         <div className="text-base leading-7 text-slate-700 [&>p]:py-3">
           <h2 className="mb-8 text-4xl font-extrabold tracking-tight text-gray-900">
             Hey there! I&apos;m <span className="text-rose-600">Dominika</span>
