@@ -2,7 +2,7 @@ import React from 'react';
 import Footer from './footer';
 import Header from './header';
 
-const Layout = ({ children }) => {
+const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
     <div className="h-full bg-rose-50">
       <Header />

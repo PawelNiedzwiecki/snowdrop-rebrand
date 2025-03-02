@@ -7,7 +7,7 @@ import { HiBars3, HiOutlineXMark } from 'react-icons/hi2';
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  const data = useStaticQuery(graphql`
+  const data = useStaticQuery<Queries.HeaderQuery>(graphql`
     query Header {
       site {
         siteMetadata {
@@ -52,7 +52,7 @@ const Header = () => {
             </button>
           </div>
           <div className="hidden lg:flex lg:gap-x-12">
-            {navigation.map(({ name, href }) => (
+            {navigation?.map(({ name, href }) => (
               <Link
                 key={name}
                 to={href}
@@ -106,13 +106,13 @@ const Header = () => {
             <div className="mt-6 flow-root">
               <div className="-my-6 divide-y divide-gray-500/10">
                 <div className="space-y-2 py-6">
-                  {navigation.map((item) => (
+                  {navigation?.map(({ name, href }) => (
                     <a
-                      key={item.name}
-                      href={item.href}
+                      key={name}
+                      href={href}
                       className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                     >
-                      {item.name}
+                      {name}
                     </a>
                   ))}
                 </div>

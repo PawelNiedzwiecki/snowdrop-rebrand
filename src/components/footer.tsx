@@ -1,29 +1,12 @@
 import { StaticImage } from 'gatsby-plugin-image';
 import React from 'react';
 import { AiFillHeart } from 'react-icons/ai';
-import { BsFacebook, BsInstagram } from 'react-icons/bs';
+import { contactInfo, socialLinks } from '../config/main-config';
+import Copyright from './copyright';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
-
-  const contactInfo = {
-    name: 'Dominika Stawicka',
-    phone: '07462161101',
-    email: 'contact@snowdrop.pl',
-  };
-
-  const socialLinks = [
-    {
-      name: 'Instagram',
-      link: 'https://www.instagram.com/snowdropmakeup',
-      Component: BsInstagram,
-    },
-    {
-      name: 'Facebook',
-      link: 'https://www.instagram.com/snowdropmakeup',
-      Component: BsFacebook,
-    },
-  ];
+  const { name, phone, email } = contactInfo;
 
   return (
     <div className="px-6 py-8">
@@ -40,51 +23,41 @@ export default function Footer() {
           </div>
           <div
             id="social-icons"
-            className="mb-4 flex items-center justify-center"
+            className="mb-6 flex items-center justify-center"
           >
-            {socialLinks.map(({ name, link, Component }) => (
+            {socialLinks.map(({ media, link, Component }) => (
               <div key={name} className="px-2">
                 <a
                   href={link}
-                  title={name}
+                  title={media}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <Component
                     size="1.5rem"
-                    title={name}
+                    title={media}
                     className="hover:text-rose-600"
                   />
                 </a>
               </div>
             ))}
           </div>
-          <div className="mb-4 flex align-middle [&>p]:ml-3">
-            <p>{contactInfo.name}</p>
+          <div className="mb-6 flex flex-col items-center md:flex-row align-middle [&>p]:ml-3">
+            <p>{name}</p>
             <p>
-              <a href={`tel: ${contactInfo.phone}`} title="phone">
-                {contactInfo.phone}
+              <a href={`tel: ${phone}`} title="phone">
+                {phone}
               </a>
             </p>
             <p>
-              <a href={`mailto: ${contactInfo.email}`} title="email">
-                {contactInfo.email}
+              <a href={`mailto: ${email}`} title="email">
+                {email}
               </a>
             </p>
           </div>
         </div>
         <hr className="mx-auto h-1 w-48 rounded bg-slate-600" />
-        <p className="pt-8 text-center text-xs font-light text-slate-500">
-          Copyright by Snowdrop {currentYear}. Created with{' '}
-          <AiFillHeart className="inline-block align-text-top" /> by{' '}
-          <a
-            href="https://github.com/PawelNiedzwiecki"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Pawel Niedzwiecki
-          </a>
-        </p>
+        <Copyright year={currentYear} author="Pawel Niedzwiecki" />
       </div>
     </div>
   );

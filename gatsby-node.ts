@@ -1,0 +1,20 @@
+import { GatsbyNode } from 'gatsby';
+
+export const createSchemaCustomization: GatsbyNode['createSchemaCustomization'] =
+  ({ actions }) => {
+    actions.createTypes(`
+    type Site {
+      siteMetadata: SiteMetadata!
+    }
+
+    type SiteMetadata {
+      title: String!
+      menuLinks: [MenuItem!]!
+    }
+
+    type MenuItem {
+      name: String!
+      href: String!
+    }
+  `);
+  };
