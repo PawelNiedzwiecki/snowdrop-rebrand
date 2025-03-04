@@ -19,9 +19,8 @@ const ServiceMap = () => {
   const [coordinates, setCoordinates] = useState<LatLngExpression[]>([]);
 
   useEffect(() => {
-    setCoordinates(latlngs.map((row) => [row[1], row[0]]));
+    setCoordinates(latlngs.map((row: LatLngExpression) => [row[1], row[0]]));
   }, []);
-
   const purpleOptions = {
     color: '#e11d48',
     weight: 1,
@@ -34,14 +33,18 @@ const ServiceMap = () => {
         Working mobile in this area
       </h3>
       <MapContainer
-        style={{ height: '40vh', borderRadius: '10px' }}
+        style={{
+          height: '40vh',
+          borderRadius: '10px',
+          filter: 'grayscale(1) opacity(0.9)',
+        }}
         center={mapCenter}
         zoom={10}
         scrollWheelZoom={false}
       >
         <TileLayer
-          attribution="&copy; Omniscale 2023 (https://maps.omniscale.com) – Map data: OpenStreetMap (License ODbL)"
-          url="https://maps.omniscale.net/v2/snowdrop-d2e964c4/style.grayscale/{z}/{x}/{y}.png"
+          url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"
+          attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
         />
         <Polygon pathOptions={purpleOptions} positions={coordinates} />
       </MapContainer>

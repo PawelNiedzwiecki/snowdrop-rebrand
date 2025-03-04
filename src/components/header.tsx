@@ -23,7 +23,7 @@ const Header = () => {
   const navigation = data?.site?.siteMetadata?.menuLinks;
 
   return (
-    <header className="relative z-50">
+    <header className="relative z-50 sm:pb-12">
       <nav
         className="flex items-center justify-between px-6 py-6 lg:px-8"
         aria-label="Global"

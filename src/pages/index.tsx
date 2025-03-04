@@ -9,7 +9,7 @@ const MainPage: React.FC<PageProps> = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-8 py-12">
+      <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-8 pb-12">
         <div className="flex-1 py-8 md:py-20 pr-0 md:pr-8">
           <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
             Transform Your Look

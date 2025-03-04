@@ -34,7 +34,7 @@ const Prices: React.FC<PageProps> = () => {
   return (
     <Layout>
       <div className="mx-auto lg:px-8">
-        <div className="mx-auto max-w-2xl pb-6 sm:text-center">
+        <div className="mx-auto max-w-2xl pb-6 sm:text-center sm:max-w-none">
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
             Simple no-tricks pricing
           </h2>
