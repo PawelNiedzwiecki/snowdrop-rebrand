@@ -3,7 +3,6 @@ import * as Gatsby from 'gatsby';
 import { vi, describe, it, expect } from 'vitest';
 import { render, screen } from '@testing-library/react';
 import PortfolioPage from '../portfolio';
-import { type PageProps } from 'gatsby';
 import { mockPageProps } from './utils/test-utils';
 
 // Mock the Gatsby Link component

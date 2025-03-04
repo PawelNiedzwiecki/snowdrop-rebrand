@@ -7,32 +7,9 @@ import Seo from '../components/seo';
 import ServiceMap from '../components/service-map';
 import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { services } from '../config/service-types';
 import { useSelectServiceFromUrl } from '../hooks/useSelectType';
-
-type ContactItemType = {
-  id: 'name' | 'email' | 'phone' | 'message' | 'service';
-  name: string;
-  type: string;
-  placeholder: string;
-  required: boolean;
-};
-
-export type Inputs = {
-  [key in ContactItemType['id']]: string;
-};
-
-const schema = z
-  .object({
-    name: z.string().min(1),
-    email: z.string().email(),
-    phone: z.string().min(9),
-    service: z.enum(
-      services.map((service) => service.name) as [string, ...string[]]
-    ),
-    message: z.string().min(1).trim(),
-  })
-  .required();
+import { Inputs } from '../types/contact-types';
+import { contactItems, schema, services } from '../config/main-config';
 
 type FormData = z.infer<typeof schema>;
 
@@ -57,30 +34,6 @@ const Contact: React.FC<PageProps> = ({ location }) => {
     'shadow-sm bg-gray-50 outline-none border border-gray-300 text-sm rounded-lg transition duration-300 focus:border-red-700 block w-full p-2.5';
 
   const astreix = <span className="ml-0.5 text-xs">*</span>;
-
-  const contactItems: ContactItemType[] = [
-    {
-      id: 'name',
-      name: 'Your name',
-      type: 'text',
-      placeholder: 'Dominika',
-      required: true,
-    },
-    {
-      id: 'email',
-      name: 'Your email',
-      type: 'email',
-      placeholder: 'dominika@snowdrop.pl',
-      required: true,
-    },
-    {
-      id: 'phone',
-      name: 'Your phone',
-      type: 'tel',
-      placeholder: 'Tell me your number so I can get in touch with you quicker',
-      required: false,
-    },
-  ];
 
   useEffect(() => {
     if (selected) {

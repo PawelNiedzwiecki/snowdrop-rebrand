@@ -1,6 +1,5 @@
 import { StaticImage } from 'gatsby-plugin-image';
 import React from 'react';
-import { AiFillHeart } from 'react-icons/ai';
 import { contactInfo, socialLinks } from '../config/main-config';
 import Copyright from './copyright';
 
