@@ -1,10 +1,10 @@
-import { LatLngExpression } from 'leaflet';
+import { LatLngTuple } from 'leaflet';
 import React, { useEffect, useState } from 'react';
 import { MapContainer, Polygon, TileLayer } from 'react-leaflet';
 
 const ServiceMap = () => {
-  const mapCenter: LatLngExpression = [51.3018, -0.5603];
-  const latlngs: LatLngExpression[] = [
+  const mapCenter: LatLngTuple = [51.3018, -0.5603];
+  const latlngs: LatLngTuple[] = [
     [-0.626843, 51.1741319],
     [-0.3127429, 51.2181829],
     [-0.3070834, 51.3048792],
@@ -16,10 +16,10 @@ const ServiceMap = () => {
     [-0.7987162, 51.2086394],
   ];
 
-  const [coordinates, setCoordinates] = useState<LatLngExpression[]>([]);
+  const [coordinates, setCoordinates] = useState<LatLngTuple[]>([]);
 
   useEffect(() => {
-    setCoordinates(latlngs.map((row: LatLngExpression) => [row[1], row[0]]));
+    setCoordinates(latlngs.map((row: LatLngTuple) => [row[1], row[0]]));
   }, []);
   const purpleOptions = {
     color: '#e11d48',

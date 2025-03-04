@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { ServicesType } from '../types/select-types';
-import { services } from '../types/services';
+import { services } from '../config/main-config';
 import { WindowLocation } from 'reach__router';
 
 export const useSelectServiceFromUrl = (location: WindowLocation) => {

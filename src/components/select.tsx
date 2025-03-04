@@ -1,9 +1,9 @@
 import { Listbox, Transition } from '@headlessui/react';
 import React, { Fragment } from 'react';
 import { HiCheck, HiChevronUpDown } from 'react-icons/hi2';
-import { services } from '../types/services';
+import { services } from '../config/main-config';
 import { ControllerRenderProps, UseFormStateReturn } from 'react-hook-form';
-import { Inputs } from '../pages/contact';
+import { Inputs } from '../types/contact-types';
 
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(' ');

@@ -1,15 +1,15 @@
-import React, { useEffect } from 'react';
-import { useForm, SubmitHandler, Controller } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
 import { HeadFC, type PageProps } from 'gatsby';
+import React, { useEffect } from 'react';
+import { Controller, SubmitHandler, useForm } from 'react-hook-form';
+import { z } from 'zod';
 import Layout from '../components/layout';
 import Select from '../components/select';
 import Seo from '../components/seo';
 import ServiceMap from '../components/service-map';
-import { z } from 'zod';
-import { zodResolver } from '@hookform/resolvers/zod';
+import { contactItems, schema, services } from '../config/main-config';
 import { useSelectServiceFromUrl } from '../hooks/useSelectType';
 import { Inputs } from '../types/contact-types';
-import { contactItems, schema, services } from '../config/main-config';
 
 type FormData = z.infer<typeof schema>;
 
@@ -19,7 +19,6 @@ const Contact: React.FC<PageProps> = ({ location }) => {
   const {
     register,
     handleSubmit,
-    watch,
     control,
     setValue,
     formState: { errors },
@@ -27,8 +26,6 @@ const Contact: React.FC<PageProps> = ({ location }) => {
     resolver: zodResolver(schema),
   });
   const onSubmit: SubmitHandler<FormData> = (data) => console.log(data);
-
-  // console.log(watch('name')); // watch input value by passing the name of it
 
   const boxClass =
     'shadow-sm bg-gray-50 outline-none border border-gray-300 text-sm rounded-lg transition duration-300 focus:border-red-700 block w-full p-2.5';
