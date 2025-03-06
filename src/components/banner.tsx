@@ -14,7 +14,7 @@ export default function Banner() {
         aria-hidden="true"
       >
         <div
-          className="aspect-[577/310] w-[36.0625rem]"
+          className="aspect-577/310 w-[36.0625rem]"
           style={{
             clipPath:
               'polygon(74.8% 41.9%, 97.2% 73.2%, 100% 34.9%, 92.5% 0.4%, 87.5% 0%, 75% 28.6%, 58.5% 54.6%, 50.1% 56.8%, 46.9% 44%, 48.3% 17.4%, 24.7% 53.9%, 0% 27.9%, 11.9% 74.2%, 24.9% 54.1%, 68.6% 100%, 74.8% 41.9%)',
@@ -26,7 +26,7 @@ export default function Banner() {
         aria-hidden="true"
       >
         <div
-          className="aspect-[577/310] w-[36.0625rem]"
+          className="aspect-577/310 w-[36.0625rem]"
           style={{
             clipPath:
               'polygon(74.8% 41.9%, 97.2% 73.2%, 100% 34.9%, 92.5% 0.4%, 87.5% 0%, 75% 28.6%, 58.5% 54.6%, 50.1% 56.8%, 46.9% 44%, 48.3% 17.4%, 24.7% 53.9%, 0% 27.9%, 11.9% 74.2%, 24.9% 54.1%, 68.6% 100%, 74.8% 41.9%)',
@@ -41,7 +41,7 @@ export default function Banner() {
         </p>
         <a
           href="#"
-          className="duration-400 flex-none rounded-full bg-rose-600 px-3.5 py-1 text-sm font-semibold text-white shadow-sm transition  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-900"
+          className="duration-400 flex-none rounded-full bg-rose-600 px-3.5 py-1 text-sm font-semibold text-white shadow-xs transition  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-900"
         >
           Enroll now <span aria-hidden="true">&rarr;</span>
         </a>

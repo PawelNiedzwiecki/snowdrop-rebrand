@@ -55,7 +55,7 @@ export default function Footer() {
             </p>
           </div>
         </div>
-        <hr className="mx-auto h-1 w-48 rounded bg-slate-600" />
+        <hr className="mx-auto h-1 w-48 rounded-sm bg-slate-600" />
         <Copyright year={currentYear} author="Pawel Niedzwiecki" />
       </div>
     </div>

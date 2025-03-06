@@ -51,7 +51,7 @@ const Prices: React.FC<PageProps> = () => {
             quasi iusto modi velit ut non voluptas in. Explicabo id ut laborum.
           </p>
         </div>
-        <div className="overflow-hidden rounded-lg shadow-sm">
+        <div className="overflow-hidden rounded-lg shadow-xs">
           {services.map(({ id, name, price, info }) => (
             <div
               key={name}

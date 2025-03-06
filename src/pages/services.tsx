@@ -8,7 +8,7 @@ const Services = () => (
   <Layout>
     <section>
       <p>Your skin is an investment. Not an expense.</p>
-      <div className="mx-auto max-w-screen-xl items-center gap-16 px-0 py-6 lg:grid lg:grid-cols-2 lg:px-6 lg:py-16">
+      <div className="mx-auto max-w-(--breakpoint-xl) items-center gap-16 px-0 py-6 lg:grid lg:grid-cols-2 lg:px-6 lg:py-16">
         <div className="font-light text-gray-900 sm:text-lg">
           <h2 className="mb-4 text-4xl font-extrabold tracking-tight text-gray-900">
             Facial lymphatic skin treatment
@@ -46,7 +46,7 @@ const Services = () => (
       </div>
     </section>
     <section>
-      <div className="mx-auto max-w-screen-xl items-center gap-16 px-0 py-6 lg:grid lg:grid-cols-2 lg:px-6 lg:py-16">
+      <div className="mx-auto max-w-(--breakpoint-xl) items-center gap-16 px-0 py-6 lg:grid lg:grid-cols-2 lg:px-6 lg:py-16">
         <div className="order-2 font-light text-gray-900 sm:text-lg">
           <h2 className="mb-4 text-4xl font-extrabold tracking-tight text-gray-900">
             Facial lymphatic skin treatment

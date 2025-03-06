@@ -27,7 +27,7 @@ export default function Select({
             Select service
           </Listbox.Label>
           <div className="relative mt-2">
-            <Listbox.Button className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm shadow-sm focus:border-rose-500 focus:ring-rose-500">
+            <Listbox.Button className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm shadow-xs focus:border-rose-500 focus:ring-rose-500">
               <span className="flex items-center">
                 <span className="block truncate">{value}</span>
               </span>
@@ -45,7 +45,7 @@ export default function Select({
               leaveFrom="opacity-100"
               leaveTo="opacity-0"
             >
-              <Listbox.Options className="absolute z-10 mt-1 max-h-56 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
+              <Listbox.Options className="absolute z-10 mt-1 max-h-56 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-hidden sm:text-sm">
                 {services
                   .filter((service) => !service.default)
                   .map((service) => (

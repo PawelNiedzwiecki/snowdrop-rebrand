@@ -25,7 +25,7 @@ const MainPage: React.FC<PageProps> = () => {
           <div className="mt-10 flex items-center gap-x-6">
             <Link
               to="#get-in-touch"
-              className="rounded-md bg-rose-600 px-6 py-3 text-base font-semibold text-white shadow-sm hover:bg-rose-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-rose-700"
+              className="rounded-md bg-rose-600 px-6 py-3 text-base font-semibold text-white shadow-xs hover:bg-rose-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-rose-700"
             >
               Book Your Session
             </Link>
@@ -62,7 +62,7 @@ const MainPage: React.FC<PageProps> = () => {
           </div>
           <div className="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {/* Bridal Makeup */}
-            <div className="flex flex-col items-center p-8 bg-white rounded-xl shadow-sm">
+            <div className="flex flex-col items-center p-8 bg-white rounded-xl shadow-xs">
               <div className="rounded-lg p-3 bg-rose-100">
                 <svg
                   className="w-6 h-6 text-rose-600"
@@ -87,7 +87,7 @@ const MainPage: React.FC<PageProps> = () => {
             </div>
 
             {/* Special Events */}
-            <div className="flex flex-col items-center p-8 bg-white rounded-xl shadow-sm">
+            <div className="flex flex-col items-center p-8 bg-white rounded-xl shadow-xs">
               <div className="rounded-lg p-3 bg-rose-100">
                 <svg
                   className="w-6 h-6 text-rose-600"
@@ -112,7 +112,7 @@ const MainPage: React.FC<PageProps> = () => {
             </div>
 
             {/* Skin Care & Beauty */}
-            <div className="flex flex-col items-center p-8 bg-white rounded-xl shadow-sm">
+            <div className="flex flex-col items-center p-8 bg-white rounded-xl shadow-xs">
               <div className="rounded-lg p-3 bg-rose-100">
                 <svg
                   className="w-6 h-6 text-rose-600"
@@ -185,7 +185,7 @@ const MainPage: React.FC<PageProps> = () => {
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <Link
                 to="/contact"
-                className="rounded-md bg-rose-600 px-6 py-3 text-base font-semibold text-white shadow-sm hover:bg-rose-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-rose-700"
+                className="rounded-md bg-rose-600 px-6 py-3 text-base font-semibold text-white shadow-xs hover:bg-rose-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-rose-700"
               >
                 Schedule Consultation
               </Link>

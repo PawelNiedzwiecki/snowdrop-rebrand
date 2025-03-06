@@ -33,13 +33,13 @@ const Portfolio: React.FC<PageProps<Queries.AboutQuery>> = ({ data }) => {
   return (
     <Layout>
       <button
-        className="rounded-md bg-rose-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-rose-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-rose-700"
+        className="rounded-md bg-rose-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-rose-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-rose-700"
         onClick={() => setbigView(!bigView)}
       >
         switch cols
       </button>
       <div
-        className={`mx-auto grid max-w-screen-xl items-stretch gap-4 px-4 py-8 ${
+        className={`mx-auto grid max-w-(--breakpoint-xl) items-stretch gap-4 px-4 py-8 ${
           bigView ? 'grid-cols-2' : 'grid-cols-4'
         } lg:px-6 lg:py-16`}
       >
